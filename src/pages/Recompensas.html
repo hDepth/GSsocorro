@@ -8,15 +8,50 @@
 </head>
 <body>
 
-    <div id="produtos">
-        <h2>Vitrine:</h2>
+    <header>
+        <div class="container">
+            <div class="left">
+                <img src="/src/img/logotipo.png" alt="Logo">
+            </div>
+            <div class="center">
+                <nav>
+                    <ul>
+                        
+                        <li class="dropdown">
+                            <a href="#">GreenBack</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Tarefas</a></li>
+                                <li><a href="/src/pages/Recompensas.html">Recompensas</a></li>
+                                <li><a href="#">Saiba Mais</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right">
+                <div class="dropdown">
+                    <img src="/src/img/perfil-icon.png" alt="Ícone de Perfil" width="50" height="50">
+                    <div class="dropdown-content">
+                      <a href="/src/pages/LogIn.html">Perfil</a>
+                      <a href="/src/pages/SigIn.html">Sair</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </header>
 
+    <div class="cashback">
+        
     </div>
 
+    <div id="produtos">
+    </div>
 
     <div id="carrinho">
-
         <h2>Carrinho:</h2>
+        <div id="total-coins">
+            <h2>Total de Coins: 0</h2>
+        </div>
     </div>
 
     <script src="/src/js/Recompensas.js"></script>

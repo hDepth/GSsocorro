@@ -16,7 +16,7 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 80%;
-    height: auto; /* Alteração aqui */
+    height: auto;
     margin: 0 auto;
 }
 
@@ -95,14 +95,14 @@ nav ul li a {
 .main-content {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* Alteração aqui */
-    justify-content: center; /* Alteração aqui */
-    padding: 20px; /* Alteração aqui */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
 .card {
-    flex: 1 1 300px; /* Alteração aqui */
-    margin: 10px; /* Alteração aqui */
+    flex: 1 1 300px;
+    margin: 10px;
 }
 
 .card p {
@@ -192,7 +192,7 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: flex-end; /* Alinhando à direita */
+    justify-content: flex-end;
     align-items: center;
     height: 100%;
     width: 100%;
