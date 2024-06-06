@@ -31,6 +31,14 @@ header {
     margin: 0 10px;
 }
 
+.Nav-a {
+    font-size: 25px;
+    color: #4CAF50;
+    box-shadow: 2px 2px 4px black;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
 .center ul {
     list-style-type: none;
     padding: 0;
@@ -183,11 +191,12 @@ nav ul li a {
 footer {
     background-color: rgb(161, 248, 161);
     color: white; 
-    position: fixed;
     bottom: 0;
     width: 100%;
     padding: 20px 0;
-    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .footer-content {

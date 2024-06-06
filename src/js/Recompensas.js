@@ -121,6 +121,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function resgatarGreenbackCoins() {
+        var totalCoinsNoCarrinho = parseInt(document.getElementById('total-coins').textContent.split(":")[1].trim());
+        if (saldoGreenbackCoins >= totalCoinsNoCarrinho) {
+            saldoGreenbackCoins -= totalCoinsNoCarrinho;
+            updateBalance(); // Atualiza o saldo na interface do usuário
+            // Limpa o carrinho
+            items.map((val) => {
+                val.quantidade = 0;
+            });
+            atualizarCarrinho(); // Atualiza o carrinho na interface do usuário
+        } else {
+            alert('Saldo insuficiente');
+        }
+    }
+
+    document.querySelector('.button-resgatar .button').addEventListener('click', function() {
+        resgatarGreenbackCoins();
+    });
+
     lojaInicio();
 
     var addLinks = document.getElementsByClassName('add-to-cart');
