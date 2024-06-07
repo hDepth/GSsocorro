@@ -44,11 +44,11 @@
             <div class="text">
                 <h3>Explore e Aprenda com Nosso Chatbot: Descubra Mais sobre Microplásticos</h3>
                 <p>Na GreenBack, estamos comprometidos em educar e conscientizar sobre os impactos dos microplásticos em nossos oceanos. Por meio de nosso chatbot, você pode mergulhar mais fundo nesse tema crucial. Descubra como os microplásticos estão afetando a vida marinha, aprenda sobre suas fontes e descubra maneiras de ajudar a reduzir sua presença nos oceanos. Nosso chatbot está aqui para ajudá-lo a se tornar parte da solução. Dê um passo em direção à conscientização e comece sua jornada de aprendizado agora mesmo!</p>
-            </div>
+            
 
             <div class="contact-form">
               <h2>Entre em Contato</h2>
-              <form action="/enviar_mensagem" method="POST">
+              <form action="#" method="POST">
                   <div class="form-group">
                       <label for="nome">Nome:</label>
                       <input type="text" id="nome" name="nome" required>
@@ -61,11 +61,28 @@
                       <label for="mensagem">Mensagem:</label>
                       <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
                   </div>
-                  <button type="submit">Enviar Mensagem</button>
+                  <button >Enviar Mensagem</button>
               </form>
           </div>
           
-            
+        </div>
+        </div>
+
+        <div class="right-main">
+          <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "b4bdf8e4-f943-4e83-8d3b-1e574989d543", // The ID of this integration.
+              region: "us-south", // The region your integration is hosted in.
+              serviceInstanceID: "04e00f23-e091-469f-b872-40773d81bf0a", // The ID of your service instance.
+              onLoad: async (instance) => { await instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+          </script>
+
         </div>
     </div>
   </main>
