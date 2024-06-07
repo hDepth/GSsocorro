@@ -1,9 +1,10 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -11,6 +12,12 @@ header {
     color: #fff;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+}
+
+main{
+  flex-grow: 1;
+  text-align: center;
+  margin-top: 25px;
 }
 
 .container {

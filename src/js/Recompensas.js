@@ -3,49 +3,49 @@ document.addEventListener('DOMContentLoaded', function() {
     const items = [
         {
             id: 0,
-            nome: 'Caneca GreenBack',
+            nome: 'Caneca GreenBack R$100,00',
             img: '/src/img/canecaGB.jpg',
             quantidade: 0,
             preco: 100
         },
         {
             id: 1,
-            nome: 'GreenBackToy',
+            nome: 'GreenBackToy R$125,00',
             img: '/src/img/carrin.png',
             quantidade: 0,
             preco: 125
         },
         {
             id: 2,
-            nome: 'Copo GreenBack',
+            nome: 'Copo GreenBack R$150,00',
             img: '/src/img/copogb.jpeg',
             quantidade: 0,
             preco: 150
         },
         {
             id: 3,
-            nome: 'GreenBack',
+            nome: 'GreenBack R$175,00',
             img: '/src/img/logotipo.png',
             quantidade: 0,
             preco: 175
         },
         {
             id: 4,
-            nome: 'GreenBack',
+            nome: 'GreenBack R$200,00',
             img: '/src/img/logotipo.png',
             quantidade: 0,
             preco: 200
         },
         {
             id: 5,
-            nome: 'GreenBack',
+            nome: 'GreenBack R$225,00',
             img: '/src/img/logotipo.png',
             quantidade: 0,
             preco: 225
         },
     ];
 
-    let saldoGreenbackCoins = 10000; // Saldo inicial de Greenback Coins
+    let saldoGreenbackCoins = 10000;
 
     function lojaInicio() {
         var containerRecompensas = document.getElementById('produtos');
@@ -59,10 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
         });
 
-        // Exibir o saldo de Greenback Coins
+
         document.querySelector('.cashback').innerHTML += `<p>Saldo de Greenback Coins: ${saldoGreenbackCoins}</p>`;
 
-        // Adicionar opções de cashback
         document.querySelector('.cashback').innerHTML += `
         <h2>Opções de Cashback:</h2>
         <div class="cashback-options-div"> 
@@ -97,12 +96,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (items[key].quantidade > 0) {
                     items[key].quantidade--;
                     atualizarCarrinho();
-                    greenbackCoins(); // Chama greenbackCoins após remover um item
+                    greenbackCoins(); 
                 }
                 return false;
             });
         }
-        greenbackCoins(); // Chama greenbackCoins após atualizar o carrinho
+        greenbackCoins(); 
     }
 
     function greenbackCoins() {
@@ -125,12 +124,12 @@ document.addEventListener('DOMContentLoaded', function() {
         var totalCoinsNoCarrinho = parseInt(document.getElementById('total-coins').textContent.split(":")[1].trim());
         if (saldoGreenbackCoins >= totalCoinsNoCarrinho) {
             saldoGreenbackCoins -= totalCoinsNoCarrinho;
-            updateBalance(); // Atualiza o saldo na interface do usuário
-            // Limpa o carrinho
+            updateBalance();
+            
             items.map((val) => {
                 val.quantidade = 0;
             });
-            atualizarCarrinho(); // Atualiza o carrinho na interface do usuário
+            atualizarCarrinho(); 
         } else {
             alert('Saldo insuficiente');
         }
@@ -148,14 +147,13 @@ document.addEventListener('DOMContentLoaded', function() {
             let key = this.getAttribute('key');
             items[key].quantidade++;
             atualizarCarrinho();
-            greenbackCoins(); // Chama greenbackCoins após adicionar um item
+            greenbackCoins(); 
             return false;
         });
     }
 
     
 
-    // Adicionar evento de clique para cada opção de cashback
     document.querySelectorAll('.cashback-option').forEach(item => {
         item.addEventListener('click', event => {
             const coins = parseInt(item.getAttribute('data-coins'));
@@ -168,7 +166,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Função para exibir o modal de confirmação
     function showConfirmationModal(coins, value) {
         const modal = document.createElement('div');
         modal.classList.add('modal');
@@ -198,12 +195,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Função para fechar o modal
     function closeModal(modal) {
         modal.remove();
     }
 
-    // Função para atualizar o saldo de Greenback Coins
     function updateBalance() {
         document.querySelector('.cashback p').textContent = `Saldo de Greenback Coins: ${saldoGreenbackCoins}`;
     }

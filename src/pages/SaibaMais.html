@@ -32,23 +32,43 @@
                     <img src="/src/img/perfil-icon.png" alt="Ícone de Perfil" width="50" height="50">
                     <div class="dropdown-content">
                       <a href="/src/pages/LogIn.html">Perfil</a>
-                      <a href="/src/pages/SigIn.html">Sair</a>
+                      <a href="/index.html">Sair</a>
                     </div>
                   </div>
             </div>
         </div>
     </header>
-
+  <main>
     <div class="content">
         <div class="left-main">
             <div class="text">
                 <h3>Explore e Aprenda com Nosso Chatbot: Descubra Mais sobre Microplásticos</h3>
                 <p>Na GreenBack, estamos comprometidos em educar e conscientizar sobre os impactos dos microplásticos em nossos oceanos. Por meio de nosso chatbot, você pode mergulhar mais fundo nesse tema crucial. Descubra como os microplásticos estão afetando a vida marinha, aprenda sobre suas fontes e descubra maneiras de ajudar a reduzir sua presença nos oceanos. Nosso chatbot está aqui para ajudá-lo a se tornar parte da solução. Dê um passo em direção à conscientização e comece sua jornada de aprendizado agora mesmo!</p>
             </div>
+
+            <div class="contact-form">
+              <h2>Entre em Contato</h2>
+              <form action="/enviar_mensagem" method="POST">
+                  <div class="form-group">
+                      <label for="nome">Nome:</label>
+                      <input type="text" id="nome" name="nome" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="mensagem">Mensagem:</label>
+                      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                  </div>
+                  <button type="submit">Enviar Mensagem</button>
+              </form>
+          </div>
+          
             
         </div>
     </div>
-
+  </main>
     <footer>
         <div class="footer-content">
             <div class="green-box">
