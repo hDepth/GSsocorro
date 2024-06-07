@@ -4,8 +4,11 @@ body{
 	font-weight: 300;
 	line-height: 1.7;
 	color: green;
-	background-color: #fff;
+  background-image: url("/src/img/GBck.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 a:hover {
 	text-decoration: none;
 }
