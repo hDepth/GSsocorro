@@ -111,8 +111,8 @@ nav ul li a {
 .left-main {
     display: flex;
     align-items: center;
-    border: 1px solid black;
     margin-left: 7.5%;
+    max-width: 90vh;
 }
 
 .text {
@@ -129,7 +129,6 @@ nav ul li a {
     height: 50vh;
     position: relative;
     overflow: hidden;
-    border: 1px solid black;
     margin-right: 7.5%;
 }
 
@@ -261,6 +260,10 @@ nav ul li a {
     .left img {
         height: 40px;
         width: auto;
+    }
+    .left-main {
+        max-width: 40vh;
+
     }
 
     .text p {

@@ -134,7 +134,13 @@ nav ul li a {
     padding: 20px;
     border: 1px solid black;
     max-height: 50px;
-    
+    overflow: hidden;
+}
+.opcao #a{
+
+  width: 8%;
+  margin-top: 25px;
+
 }
 
 .checkbox-wrapper input[type="checkbox"] {
@@ -179,7 +185,7 @@ nav ul li a {
 footer {
     background-color: rgb(161, 248, 161);
     color: white; 
-    
+    bottom: 0;
     width: 100%;
     padding: 20px 0;
     border-top-left-radius: 10px;
